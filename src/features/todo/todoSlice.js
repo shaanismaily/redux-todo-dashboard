@@ -14,7 +14,7 @@ export const todoSlice = createSlice({
                 text: action.payload,
                 completed: false
             }
-            state.todos.push(todo)
+            state.todos.unshift(todo)
         },
         removeTodo: (state, action) => {
             state.todos = state.todos.filter(todo => todo.id !== action.payload)
